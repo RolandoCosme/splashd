@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Splash'd</title>
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!--favicon CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!--Custom CSS -->
+  <link href="css/grayscale.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/map.css">
+</head>
+<body>
+<!--Top Page-->
+<a id= "page-top"></a>
+<!-- Intro Header -->
+  <header class="intro" page-top>
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 class="brand-heading">Splsh'd</h1>
+            <p class="intro-text">Use the "Bathroom Now" button to find the closest bathrooms to your current location.<br/>Use the "I can hold it til later" button to enter an address and find bathrooms near there.</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-inline">
+                  <a class="btn btn-success" id="showResults">Bathroom Now!</a>
+                  <a class="btn btn-warning" id="showResults">I can hold it til later</a>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="userAddress" placeholder="Enter Address"/>
+                  </div>
+                </div>
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<!--Search results by address-->
+  <div class="container col-md-10 col-md-offset-2">
+    <div class="resultsRow" id="rSection">
+    </div>
+  </div>
+<!--map-->
+  <div class="container col-md-6, col-lg-offset-2" id="resultMap">
+  </div>
+  <div class="container col-md-6, col-lg-offset-2" id="map_div"></div>
+<!--Reviews Modal Form-->
+  <aside class="modal fade" id="reviews" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Write on the Wall</h4>
+        </div>
+        <div class="modal-body">
+          <form id="contact_form" enctype="multipart/form-data">
+            <div class="row" align="center">
+              <div class="col-md-6">
+                <textarea id="review-message" class="wallComment" rows="4" cols="45" placeholder="Write Your Comments Here"></textarea><br />
+                <button class="btn btn-primary">Submit Review</button>
+                <span class="inline">
+                  Rating: 
+                  <i id="one-star-o" class="fa fa-star-o"></i><i id="two-stars-o" class="fa fa-star-o"></i><i id="three-stars-o" class="fa fa-star-o"></i><i id="four-stars-o" class="fa fa-star-o"></i><i id="five-stars-o" class="fa fa-star-o"></i>
+                </span>
+              </div>
+              <div class="col-md-6">
+              <ul id="base-messages"></ul>
+              </div>
+            </div>
+          </form> 
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-danger" data-dismiss="modal">Close</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+<!--new test modal
+<div class="modal fade" id="reviews" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Write on the Wall</h4>
+      </div>
+      <div class="modal-body">
+        <form id="contact_form" enctype="multipart/form-data">
+          <div class="row" align="center">
+            <div class="col-md-6">
+              <button class="btn btn-primary">Submit Review</button>
+              <span class="inline">Rating: 
+              <i id="one-star-o" class="fa fa-star-o"></i><i id="two-stars-o" class="fa fa-star-o"></i><i id="three-stars-o" class="fa fa-star-o"></i><i id="four-stars-o" class="fa fa-star-o"></i><i id="five-stars-o" class="fa fa-star-o"></i>
+              </span>
+            </div>
+            <div class="col-md-6">
+              <ul id="base-messages"></ul>
+            </div>
+          </div>
+        </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div id="backTopBtn">
+        <a href="#page-top"><img src="http://www.thisisyoke.com/wp-content/themes/shaken-grid-free/images/backTopOff.png" width="200" height="200" alt="yoke back to top button"></a>
+      </div>
+      <p>Copyright &copy; Splsh'd 2015</p>
+    </div>
+  </footer>
+
+  <!--jquery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+  <!-- Maps JavaScript -->
+   <script type="text/javascript" src="js/markers.js"></script>
+   <script type="text/javascript" src="js/map.js"></script>
+  <!-- Geolocation Javascript -->
+  
+  <!--Firebase -->
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <!--Scrollto-->
+  <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+</body>
+</html>
