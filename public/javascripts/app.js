@@ -8,7 +8,13 @@ $stateProvider
   templateUrl: '/locationsPartial.html',
   controller: 'locationController'
 
+})
+.state('userjson', {
+  url: '/userjson',
+  templateUrl: '/userTest.html',
+  controller: 'userTestController'
 });
+
 
 $locationProvider.html5Mode(true);
 
