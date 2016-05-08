@@ -10,6 +10,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var request = require('request');
 var app = express();
+var models = require('./models');
+
 
 
 
@@ -54,8 +56,11 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(PORT, function() {
-  console.log("Listening on PORT " + PORT);
+
+models.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("Listening on PORT " + PORT);
+  });
 });
 
 
