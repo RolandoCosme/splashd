@@ -37,16 +37,19 @@
     </div>
   </header>
 
-<body ng-app="myApp" ng-controller="locationController as vm">
+<div ng-app="myApp" ng-controller="locationController as vm">
   <ng-map center='current-position'
     geo-fallback-center="[40.74, -74.18]"
     geo-callback="vm.callbackFunc('you')"
     >
-    </ng-map>
+
+  </ng-map>
 
 
 
 <div ui-view></div>
+
+
 
 
 
@@ -59,8 +62,8 @@
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 <!-- ng table cdn -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.8.3/ng-table.js"> </script>
-<!-- bootstrap cdn -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- materialize js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js" crossorigin="anonymous"></script>
 <!-- main app for angular configuration -->
 <script type='text/javascript' src='/javascripts/app.js'> </script>
 <!-- controller for location partial -->
