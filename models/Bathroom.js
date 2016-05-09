@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
   {
     classMethods: {
       associate: function(models) {
-        // not sure what associations yet
+        Bathroom.hasMany(models.Rating);
       }
     }
   });
