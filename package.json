@@ -1,5 +1,5 @@
 {
-  "name": "wheresJohnny",
+  "name": "whereisjohnny",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,19 @@
     "morgan": "~1.7.0",
     "mysql": "^2.10.2",
     "request": "^2.72.0",
+    "sequelize": "^3.23.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "### General Project Summary",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RolandoCosme/splashd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RolandoCosme/splashd/issues"
+  },
+  "homepage": "https://github.com/RolandoCosme/splashd#readme"
 }

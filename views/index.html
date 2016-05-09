@@ -3,15 +3,15 @@
 <head>
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <!-- Latest compiled and minified CSS Boot Strap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Latest compiled and minified Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" crossorigin="anonymous">
   <!-- ngTable css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.8.3/ng-table.css" media="screen" title="no title" charset="utf-8">
    <link rel = "stylesheet" href="/stylesheets/style.css" >
   <base href="/" />
 </head>
 <body>
-
+  <div ng-include="'/partials/partial-navbar.html'"></div>
   <header class="intro" page-top>
     <div class="intro-body">
       <div class="container">
@@ -23,8 +23,8 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-inline">
-                  <a hfref="#resultsRow" class="btn btn-success" id="showResults">Bathroom Now!</a>
-                  <a class="btn btn-warning" id="showResults">I can hold it til later</a>
+                  <a hfref="#resultsRow" class="waves-effect waves-light btn" id="showResults">Bathroom Now!</a>
+                  <a class="waves-effect waves-light btn" id="showResults">I can hold it til later</a>
                   <div class="form-group">
                     <input type="text" class="form-control" id="userAddress" placeholder="Enter Address"/>
                   </div>
