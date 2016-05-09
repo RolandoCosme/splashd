@@ -37,15 +37,12 @@
     </div>
   </header>
 
- <div ng-controller="locationController as vm">
-    <input type="button" value="Auto Rotate" ng-click="vm.autoRotate();">
-    <ng-map center="40.6076158, -94.952786"
-      zoom="18"
-      map-type-id="SATELLITE"
-      tilt="45"
-      heading="90">
+<body ng-app="myApp" ng-controller="locationController as vm">
+  <ng-map center='current-position'
+    geo-fallback-center="[40.74, -74.18]"
+    geo-callback="vm.callbackFunc('you')"
+    >
     </ng-map>
-</div>
 
 
 
