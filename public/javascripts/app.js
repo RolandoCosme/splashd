@@ -7,12 +7,21 @@ $stateProvider
   url: '/location',
   templateUrl: '/locationsPartial.html',
   controller: 'locationController'
-
 })
 .state('userjson', {
   url: '/userjson',
   templateUrl: '/userTest.html',
   controller: 'userTestController'
+})
+.state('bathrooms', {
+  url: '/bathrooms',
+  templateUrl: '/partial-bathrooms',
+  controller: '/bathroomController'
+})
+.state('signup', {
+  url: '/signup',
+  templateUrl: '/partial-signUp',
+  controller: '/signUpController' 
 });
 
 

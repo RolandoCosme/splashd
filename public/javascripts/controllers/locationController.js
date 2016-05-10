@@ -1,6 +1,9 @@
 
 angular.module('wheresJohnny',['ngMap'])
   .controller('locationController', function(NgMap) {
+    
+
+
     var vm = this;
     vm.bathrooms = [];
     NgMap.getMap().then(function(map) {
